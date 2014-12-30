@@ -72,4 +72,12 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-telosys-maven-TelosysTools</id>
+            <name>telosys-maven-TelosysTools</name>
+            <url>https://api.bintray.com/maven/telosys/maven/TelosysTools</url>
+        </repository>
+    </distributionManagement>
+
 </project>
