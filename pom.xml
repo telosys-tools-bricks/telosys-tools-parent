@@ -13,6 +13,7 @@
         <module>../telosys-tools-commons</module>
         <module>../telosys-tools-database</module>
         <module>../telosys-tools-repository</module>
+        <module>../telosys-tools-dsl-parser</module>
         <module>../telosys-tools-generic-model</module>
         <module>../telosys-tools-generator-engine</module>
         <module>../telosys-tools-generator</module>
