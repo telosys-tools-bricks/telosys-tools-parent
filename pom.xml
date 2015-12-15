@@ -17,6 +17,7 @@
         <module>../telosys-tools-generic-model</module>
         <module>../telosys-tools-generator-engine</module>
         <module>../telosys-tools-generator</module>
+        <module>../telosys-tools-api</module>
     </modules>
 
 
