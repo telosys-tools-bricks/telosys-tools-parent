@@ -1,0 +1,28 @@
+
+LICENCE HEADER MANAGEMENT :
+
+The license header is managed with the "License Maven Plugin"
+See http://code.mycila.com/license-maven-plugin/ 
+The "parent pom.xml" uses this plugin to "check" the license for all the modules
+The "licence file" is "src/license/license-header.txt" 
+
+To CHECK the license header :
+  Use "license:check" ( check if header is missing or invalid in some source file )
+  Under Eclipse : run the maven-license-check.launch 
+  
+To FORMAT the license header :
+  Use "license:format" ( add headers if missing )
+  Under Eclipse : run the maven-license-format.launch 
+  
+To REMOVE the license header :
+  Use "license:remove" ( remove existing header )
+  Under Eclipse : run the maven-license-remove.launch 
+
+To use a ".launch" file in Eclipse :
+ On the project to be processed 
+ Right-click : Run as / Run configuration : 
+ Choose the launcher ( check the launcher is "Shared file : \telosys-tools-parent" ) 
+ Use "F5" to refresh
+ 
+
+ 
