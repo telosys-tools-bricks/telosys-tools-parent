@@ -1,0 +1,18 @@
+
+VERSION MANAGEMENT :
+
+It's possible to change the current version in the "parent POM" 
+and to propagate that change onto any child modules as necessary.
+
+See http://www.mojohaus.org/versions-maven-plugin/set-mojo.html
+
+To SET A NEW VERSION  in all the "pom.xml" files :
+  Use "versions:set" with "-DnewVersion=X.X.X"
+  A "pom.xml.versionsBackup" file is created (it contains the original version) 
+  Under Eclipse : run the maven-version.launch  
+
+  
+Other commands
+ - "versions:revert" : restores the "pom.xml" files from the "pom.xml.versionsBackup" files.
+ - "versions:commit" : removes the "pom.xml.versionsBackup" files.
+ 
