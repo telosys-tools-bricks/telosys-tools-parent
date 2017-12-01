@@ -21,7 +21,8 @@
         <module>../telosys-tools-repository</module>
         <module>../telosys-tools-dsl-parser</module>
         <module>../telosys-tools-generic-model</module>
-        <module>../telosys-tools-generator-engine</module>
+        <!-- <module>../telosys-tools-generator-engine</module>  -->
+        <module>../telosys-tools-generator-engine-velocity17</module>
         <module>../telosys-tools-generator</module>
         <module>../telosys-tools-api</module>
     </modules>
