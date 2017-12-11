@@ -25,8 +25,16 @@
         <module>../telosys-tools-generator-engine-velocity17</module>
         <module>../telosys-tools-generator</module>
         <module>../telosys-tools-api</module>
+        <!-- Special module to build the "uber jar" -->
+        <module>../telosys-tools-all</module>
     </modules>
 
+	<!-- 
+		The UBER JAR "telosys-tools-X.X.X.jar" is built 
+		by "maven-shade-plugin" in "telosys-tools-api" module (see "pom.xml")
+		and available in the "dist" folder
+	-->
+	
 	<profiles>
 	
 		<profile>
