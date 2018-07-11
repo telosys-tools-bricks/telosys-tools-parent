@@ -5,26 +5,44 @@
 
     <groupId>org.telosys</groupId> <!-- New group id for deployment on Sonatype servers -->
     <artifactId>telosys-tools-parent</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.x.x</version>
 
     <packaging>pom</packaging>
     <name>Telosys Tools</name>
     
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- <skip-license>true</skip-license> -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- <skip-license>true</skip-license> -->
+		
+		<!-- modules versions -->
+		<telosys-tools-commons.version>3.0.0</telosys-tools-commons.version>
+		<telosys-tools-generic-model.version>3.0.0</telosys-tools-generic-model.version>
+		
+		<telosys-tools-database.version>3.0.0</telosys-tools-database.version>
+		<telosys-tools-repository.version>3.0.1</telosys-tools-repository.version>
+		
+		<telosys-tools-dsl-parser.version>3.0.0</telosys-tools-dsl-parser.version>
+		
+		<telosys-tools-generator-engine-velocity17.version>3.0.0</telosys-tools-generator-engine-velocity17.version>
+		<telosys-tools-generator.version>3.0.0</telosys-tools-generator.version>
+		
+		<telosys-tools-api.version>3.0.1</telosys-tools-api.version>
     </properties>
     
     <modules>
         <module>../telosys-tools-commons</module>
+        <module>../telosys-tools-generic-model</module>
+
         <module>../telosys-tools-database</module>
         <module>../telosys-tools-repository</module>
+
         <module>../telosys-tools-dsl-parser</module>
-        <module>../telosys-tools-generic-model</module>
-        <!-- <module>../telosys-tools-generator-engine</module>  -->
+
         <module>../telosys-tools-generator-engine-velocity17</module>
         <module>../telosys-tools-generator</module>
+        
         <module>../telosys-tools-api</module>
+        
         <!-- Special module to build the "uber jar" -->
         <module>../telosys-tools-all</module>
     </modules>
@@ -144,6 +162,16 @@
 		          <description>${project.artifactId}-${project.version}</description>
 		        </configuration>
 		    </plugin>
+		    
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <configuration>
+    <forkCount>3</forkCount>
+    <reuseForks>true</reuseForks>
+    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+  </configuration>
+</plugin>
 
         </plugins>
     </build>
