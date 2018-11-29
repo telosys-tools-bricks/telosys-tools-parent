@@ -24,7 +24,7 @@
 		<telosys-tools-dsl-parser.version>3.0.0</telosys-tools-dsl-parser.version>
 		
 		<telosys-tools-generator-engine-velocity17.version>3.0.0</telosys-tools-generator-engine-velocity17.version>
-		<telosys-tools-generator.version>3.0.0</telosys-tools-generator.version>
+		<telosys-tools-generator.version>3.1.0</telosys-tools-generator.version>
 		
 		<telosys-tools-api.version>3.1.0</telosys-tools-api.version>
     </properties>
