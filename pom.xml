@@ -19,7 +19,7 @@
 		<telosys-tools-generic-model.version>3.1.0</telosys-tools-generic-model.version>
 		
 		<telosys-tools-database.version>3.0.0</telosys-tools-database.version>
-		<telosys-tools-repository.version>3.0.2</telosys-tools-repository.version>
+		<telosys-tools-repository.version>3.0.3</telosys-tools-repository.version>
 		
 		<telosys-tools-dsl-parser.version>3.1.0</telosys-tools-dsl-parser.version>
 		
