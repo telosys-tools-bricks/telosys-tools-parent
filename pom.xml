@@ -15,18 +15,27 @@
 		<!-- <skip-license>true</skip-license> -->
 		
 		<!-- modules versions -->
-		<telosys-tools-commons.version>3.0.0</telosys-tools-commons.version>
+
+		<!-- API  -->		
+		<telosys-tools-api.version>3.1.0</telosys-tools-api.version>
+
+		<!-- MODELS  -->
 		<telosys-tools-generic-model.version>3.1.0</telosys-tools-generic-model.version>
 		
+		<!-- MODELS : DB MODEL  -->
 		<telosys-tools-database.version>3.0.0</telosys-tools-database.version>
 		<telosys-tools-repository.version>3.0.3</telosys-tools-repository.version>
 		
+		<!-- MODELS : DSL MODEL  -->
 		<telosys-tools-dsl-parser.version>3.1.0</telosys-tools-dsl-parser.version>
-		
+
+		<!-- GENERATOR  -->
+		<telosys-tools-generator.version>3.1.1</telosys-tools-generator.version>
 		<telosys-tools-generator-engine-velocity17.version>3.0.0</telosys-tools-generator-engine-velocity17.version>
-		<telosys-tools-generator.version>3.1.0</telosys-tools-generator.version>
+
+		<!-- COMMONS  -->		
+		<telosys-tools-commons.version>3.0.0</telosys-tools-commons.version>
 		
-		<telosys-tools-api.version>3.1.0</telosys-tools-api.version>
     </properties>
     
     <modules>
