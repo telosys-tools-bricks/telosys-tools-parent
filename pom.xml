@@ -20,7 +20,7 @@
 		<telosys-tools-api.version>3.1.0</telosys-tools-api.version>
 
 		<!-- MODELS  -->
-		<telosys-tools-generic-model.version>3.1.0</telosys-tools-generic-model.version>
+		<telosys-tools-generic-model.version>3.1.2</telosys-tools-generic-model.version>
 		
 		<!-- MODELS : DB MODEL  -->
 		<telosys-tools-database.version>3.0.0</telosys-tools-database.version>
