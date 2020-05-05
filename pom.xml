@@ -1,71 +1,106 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.telosys</groupId> <!-- New group id for deployment on Sonatype servers -->
-    <artifactId>telosys-tools-parent</artifactId>
-    <version>3.x.x</version>
+	<groupId>org.telosys</groupId> <!-- New group id for deployment on Sonatype servers -->
+	<artifactId>telosys-tools-parent</artifactId>
+	<version>3.x.x</version>
 
-    <packaging>pom</packaging>
-    <name>Telosys Tools</name>
-    
-    <properties>
+	<packaging>pom</packaging>
+	<name>telosys-tools-parent</name>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-commons</artifactId>
+				<version>3.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-database</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+
+			<!-- MODELS -->
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-generic-model</artifactId>
+				<version>3.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-dsl-parser</artifactId>
+				<version>3.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-repository</artifactId>
+				<version>3.0.3</version>
+			</dependency>
+
+			<!-- GENERATOR -->
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-generator</artifactId>
+				<version>3.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-generator-engine-velocity17</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+			<!-- VELOCITY -->
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>velocity</artifactId>
+				<version>1.7</version>
+			</dependency>
+
+			<!-- TELOSYS API -->
+			<dependency>
+				<groupId>org.telosys</groupId>
+				<artifactId>telosys-tools-api</artifactId>
+				<version>3.2.2</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- <skip-license>true</skip-license> -->
-		
-		<!-- modules versions -->
+	</properties>
 
-		<!-- API  -->		
-		<telosys-tools-api.version>3.1.0</telosys-tools-api.version>
+	<modules>
+		<module>../telosys-tools-commons</module>
+		<module>../telosys-tools-generic-model</module>
 
-		<!-- MODELS  -->
-		<telosys-tools-generic-model.version>3.1.2</telosys-tools-generic-model.version>
-		
-		<!-- MODELS : DB MODEL  -->
-		<telosys-tools-database.version>3.0.0</telosys-tools-database.version>
-		<telosys-tools-repository.version>3.0.3</telosys-tools-repository.version>
-		
-		<!-- MODELS : DSL MODEL  -->
-		<telosys-tools-dsl-parser.version>3.1.0</telosys-tools-dsl-parser.version>
+		<module>../telosys-tools-database</module>
+		<module>../telosys-tools-repository</module>
 
-		<!-- GENERATOR  -->
-		<telosys-tools-generator.version>3.1.2</telosys-tools-generator.version>
-		<telosys-tools-generator-engine-velocity17.version>3.0.0</telosys-tools-generator-engine-velocity17.version>
+		<module>../telosys-tools-dsl-parser</module>
 
-		<!-- COMMONS  -->		
-		<telosys-tools-commons.version>3.0.0</telosys-tools-commons.version>
-		
-    </properties>
-    
-    <modules>
-        <module>../telosys-tools-commons</module>
-        <module>../telosys-tools-generic-model</module>
+		<module>../telosys-tools-generator-engine-velocity17</module>
+		<module>../telosys-tools-generator</module>
 
-        <module>../telosys-tools-database</module>
-        <module>../telosys-tools-repository</module>
+		<module>../telosys-tools-api</module>
 
-        <module>../telosys-tools-dsl-parser</module>
+		<!-- Special module to build the "uber jar" -->
+		<module>../telosys-tools-all</module>
+	</modules>
 
-        <module>../telosys-tools-generator-engine-velocity17</module>
-        <module>../telosys-tools-generator</module>
-        
-        <module>../telosys-tools-api</module>
-        
-        <!-- Special module to build the "uber jar" -->
-        <module>../telosys-tools-all</module>
-    </modules>
+	<!-- The UBER JAR "telosys-tools-X.X.X.jar" is built by "maven-shade-plugin" 
+		in "telosys-tools-api" module (see "pom.xml") and available in the "dist" 
+		folder -->
 
-	<!-- 
-		The UBER JAR "telosys-tools-X.X.X.jar" is built 
-		by "maven-shade-plugin" in "telosys-tools-api" module (see "pom.xml")
-		and available in the "dist" folder
-	-->
-	
 	<profiles>
-	
+
 		<profile>
-			<!-- Profile activated if the license file is in the current directory ( build at "parent" level )-->
+			<!-- Profile activated if the license file is in the current directory 
+				( build at "parent" level ) -->
 			<id>parent-profile</id>
 			<activation>
 				<file>
@@ -79,7 +114,8 @@
 		</profile>
 
 		<profile>
-			<!-- Profile activated if the license file is in the parent directory ( build at "module" level )-->
+			<!-- Profile activated if the license file is in the parent directory 
+				( build at "module" level ) -->
 			<id>module-profile</id>
 			<activation>
 				<file>
@@ -91,7 +127,7 @@
 				<license-file>../telosys-tools-parent/src/license/license-header.txt</license-file>
 			</properties>
 		</profile>
-		
+
 	</profiles>
 
 	<!-- Distribution Management configuration (used by the deploy plugin) -->
@@ -106,93 +142,87 @@
 		</repository>
 	</distributionManagement>
 
-    <dependencies>
+	<dependencies>
 
-        <!-- FOR TESTS -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
+		<!-- FOR TESTS -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
 
-    <build>
-        <plugins>
+	<build>
+		<plugins>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>com.mycila.maven-license-plugin</groupId>
-                <artifactId>maven-license-plugin</artifactId>
-                <version>1.9.0</version>
-                <configuration>
-                	<!-- <skip>${skip-license}</skip> -->
-                    <!-- <header>src/license/license-header.txt</header> -->
-                    <header>${license-file}</header>
-                    <includes>
-                        <include>src/main/java/**</include>
-                    </includes>
-                    <strictCheck>true</strictCheck>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <!--
-                            check  : verify if some files miss license header
-                            format : add the license header when missing. If a header is existing, it is updated to the new one
-                            remove : remove existing license header
-                            -->
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            
 			<plugin>
-		        <groupId>org.sonatype.plugins</groupId>
-		        <artifactId>nexus-staging-maven-plugin</artifactId>
-		        <version>1.6.7</version> <!-- Last stable version / 2016 May -->
-		        <extensions>true</extensions>
-		        <configuration>
-		          <!-- The server "id" element from settings to use authentication from -->
-		          <serverId>ossrh</serverId>
-		          <!-- nexusUrl = The Base URL of Nexus instance where we want to stage -->
-		          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-		          <description>${project.artifactId}-${project.version}</description>
-		        </configuration>
-		    </plugin>
-		    
-<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <configuration>
-    <forkCount>3</forkCount>
-    <reuseForks>true</reuseForks>
-    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-  </configuration>
-</plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
 
-        </plugins>
-    </build>
+			<plugin>
+				<groupId>com.mycila.maven-license-plugin</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<version>1.9.0</version>
+				<configuration>
+					<!-- <skip>${skip-license}</skip> -->
+					<!-- <header>src/license/license-header.txt</header> -->
+					<header>${license-file}</header>
+					<includes>
+						<include>src/main/java/**</include>
+					</includes>
+					<strictCheck>true</strictCheck>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<!-- check : verify if some files miss license header format : add 
+								the license header when missing. If a header is existing, it is updated to 
+								the new one remove : remove existing license header -->
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
-<!-- 
-    <distributionManagement>
-        <repository>
-            <id>bintray-telosys-maven-TelosysTools</id>
-            <name>telosys-maven-TelosysTools</name>
-            <url>https://api.bintray.com/maven/telosys/maven/TelosysTools</url>
-        </repository>
-    </distributionManagement>
- -->
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version> <!-- Last stable version / 2016 May -->
+				<extensions>true</extensions>
+				<configuration>
+					<!-- The server "id" element from settings to use authentication from -->
+					<serverId>ossrh</serverId>
+					<!-- nexusUrl = The Base URL of Nexus instance where we want to stage -->
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<description>${project.artifactId}-${project.version}</description>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<!-- <version>2.21.0</version> -->
+				<version>2.12.4</version>
+				<configuration>
+					<forkCount>3</forkCount>
+					<reuseForks>true</reuseForks>
+					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<!-- <distributionManagement> <repository> <id>bintray-telosys-maven-TelosysTools</id> 
+		<name>telosys-maven-TelosysTools</name> <url>https://api.bintray.com/maven/telosys/maven/TelosysTools</url> 
+		</repository> </distributionManagement> -->
 
 </project>
