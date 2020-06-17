@@ -50,7 +50,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generator-engine-velocity17</artifactId>
-				<version>3.0.0</version>
+				<version>3.3.0</version>
 			</dependency>
 			<!-- VELOCITY -->
 			<dependency>
