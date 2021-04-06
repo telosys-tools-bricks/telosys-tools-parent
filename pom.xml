@@ -228,9 +228,11 @@
 					<argLine>@{argLine} -Xmx1024m -XX:MaxPermSize=256m</argLine>
 					-->
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine> <!-- OK -->
+					<!-- 
 					<systemPropertyVariables>
 						<mavenSurefireForkNumber>id-${surefire.forkNumber}</mavenSurefireForkNumber>
 					</systemPropertyVariables>
+					 -->
 				</configuration>
 			</plugin>
 
