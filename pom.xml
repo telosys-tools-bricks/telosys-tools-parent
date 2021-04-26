@@ -125,6 +125,7 @@
 			<properties>
 				<!-- <skip-license>false</skip-license> -->
 				<license-file>../telosys-tools-parent/src/license/license-header.txt</license-file>
+				<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine> <!-- for Surefire with JaCoCo -->
 			</properties>
 		</profile>
 
@@ -222,17 +223,7 @@
 					<reuseForks>true</reuseForks>
 					  -->
 					
-					<!-- ERR : 
-						The forked VM terminated without properly saying goodbye.
-						Error occurred in starting fork
-					<argLine>@{argLine} -Xmx1024m -XX:MaxPermSize=256m</argLine>
-					-->
-					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine> <!-- OK -->
-					<!-- 
-					<systemPropertyVariables>
-						<mavenSurefireForkNumber>id-${surefire.forkNumber}</mavenSurefireForkNumber>
-					</systemPropertyVariables>
-					 -->
+					<!--  <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>  -->
 				</configuration>
 			</plugin>
 
