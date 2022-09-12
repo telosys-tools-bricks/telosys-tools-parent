@@ -40,7 +40,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generator</artifactId>
-				<version>4.0.0</version>
+				<version>4.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
@@ -58,7 +58,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-api</artifactId>
-				<version>4.0.0</version>
+				<version>4.0.1</version>
 			</dependency>
 
 		</dependencies>
