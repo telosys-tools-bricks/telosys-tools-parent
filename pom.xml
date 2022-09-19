@@ -16,7 +16,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-commons</artifactId>
-				<version>4.0.0</version>
+				<version>4.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
@@ -45,14 +45,16 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generator-engine-velocity17</artifactId>
-				<version>3.3.0</version>
+				<version>4.0.1</version>
 			</dependency>
-			<!-- VELOCITY -->
+			<!-- VELOCITY (moved in module)-->
+			<!-- 
 			<dependency>
 				<groupId>org.apache.velocity</groupId>
 				<artifactId>velocity</artifactId>
 				<version>1.7</version>
 			</dependency>
+			 -->
 
 			<!-- TELOSYS API -->
 			<dependency>
