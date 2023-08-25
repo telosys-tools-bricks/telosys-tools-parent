@@ -16,7 +16,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-commons</artifactId>
-				<version>4.0.1</version>
+				<version>4.1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
@@ -28,39 +28,32 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generic-model</artifactId>
-				<version>4.0.0</version>
+				<version>4.1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-dsl-parser</artifactId>
-				<version>4.0.0</version>
+				<version>4.1.0</version>
 			</dependency>
 			
 			<!-- GENERATOR -->
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generator</artifactId>
-				<version>4.0.1</version>
+				<version>4.1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generator-engine-velocity17</artifactId>
-				<version>4.0.1</version>
+				<version>4.1.0</version>
 			</dependency>
 			<!-- VELOCITY (moved in module)-->
-			<!-- 
-			<dependency>
-				<groupId>org.apache.velocity</groupId>
-				<artifactId>velocity</artifactId>
-				<version>1.7</version>
-			</dependency>
-			 -->
 
 			<!-- TELOSYS API -->
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-api</artifactId>
-				<version>4.0.1</version>
+				<version>4.1.0</version>
 			</dependency>
 
 		</dependencies>
