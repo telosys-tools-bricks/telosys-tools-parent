@@ -33,7 +33,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-dsl-parser</artifactId>
-				<version>4.1.0</version>
+				<version>4.1.1</version>
 			</dependency>
 			
 			<!-- GENERATOR -->
