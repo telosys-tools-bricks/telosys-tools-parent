@@ -21,7 +21,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-commons</artifactId>
-				<version>4.2.0</version>
+				<version>4.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
@@ -45,7 +45,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-generator</artifactId>
-				<version>4.2.0</version>
+				<version>4.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.telosys</groupId>
@@ -58,7 +58,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-api</artifactId>
-				<version>4.2.0</version>
+				<version>4.2.1</version>
 			</dependency>
 
 		</dependencies>
