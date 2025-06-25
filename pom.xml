@@ -26,7 +26,7 @@
 			<dependency>
 				<groupId>org.telosys</groupId>
 				<artifactId>telosys-tools-database</artifactId>
-			    <version>4.0.0</version>
+			    <version>4.2.1</version>
 			</dependency>
 
 			<!-- MODELS -->
